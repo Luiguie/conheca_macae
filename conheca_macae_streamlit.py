@@ -49,14 +49,14 @@ def main():
     col_cor_graph1.plotly_chart(macae_cor_fig, use_container_width=True)
     col_cor_graph2.plotly_chart(brasil_cor_fig, use_container_width=True)
     
-    st.write("""Macaé possui uma população residente ligeiramente menor de amarelos e indigenas se comparados
+    st.write("""Macaé possui uma população residente ligeiramente menor de amarelos e indígenas se comparados
                 com o panorama brasileiro. A distribuição de negros e brancos também varia em mais de cinco pontos percentuais,
                 com a população negra sendo 7.2% mais populosa, e a população branca sendo 6.1% menos populosa
                 na Capital Nacional da Energia.
                 """)
-    st.write("""A população vem estado em constante crescimento, quase dobrando em quantidade nos ultimos vinte anos,
-                seu crescimento está diretamente ligado ao mercado petrolifero que atrai cada vez mais trabalhadores das 
-                mais diversas regiões do Brasil em busca de oportunidades que a industria multibilionaria proporciona.
+    st.write("""A população está em constante crescimento, quase dobrando em quantidade nos últimos vinte anos,
+             seu crescimento está diretamente ligado ao mercado petrolífero que atrai cada vez mais trabalhadores das 
+             mais diversas regiões do Brasil em busca de oportunidades que a indústria multibilionária proporciona.
                 """)
     
     st.plotly_chart(macae_pop_fig)
@@ -69,7 +69,7 @@ def main():
                                 as idades, com a população feminina ultrapassando por pouco a masculina na maioria dos casos.
                                 """)
         st.write("""Existe uma concentração maior de residentes entre os 30 e 45 anos, mostrando o envelhecimento gradual
-                                da Capital da Energia. Entretanto, seu Indice de Envelhecimento ainda se encontra em 40.58, ou seja, para 
+                                da Capital da Energia. Entretanto, seu Índice de Envelhecimento ainda se encontra em 40.58, ou seja, para 
                                 cada 100 pessoas de 15 anos ou menos, há cerca de 40 de 60 anos ou mais.
                                 """)
         
@@ -78,7 +78,7 @@ def main():
     
     col_card_1, _col_card_2,col_card_3, _col_card_4,col_card_5 = st.columns(5)
     with col_card_1:
-        kpi_card("Indice de Envelhecimento","40.58")
+        kpi_card("Índice de Envelhecimento","40.58")
     
     with col_card_3:
         kpi_card("IDH","0.76")
