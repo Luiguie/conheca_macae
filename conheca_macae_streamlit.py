@@ -1,5 +1,36 @@
 import streamlit as st
 from IBGE_figs import *
+
+def kpi_card(title, info, width=250):
+    st.markdown(
+        f"""
+        <style>
+            .kpi-card {{
+                background-color: #3498db;
+                color: #fff;
+                border-radius: 10px;
+                padding: 20px;
+                text-align: center;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                width: {width}px;
+                margin-right: 50px
+            }}
+            .kpi-title {{
+                font-size: 18px;
+                font-weight: bold;
+                
+            }}
+            .kpi-info {{
+                font-size: 24px;
+            }}
+        </style>
+        <div class="kpi-card">
+            <div class="kpi-title">{title}</div>
+            <div class="kpi-info">{info}</div>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
     
 def main():
     st.markdown("<h1 style='text-align: center;'>Conheça Macaé - Informações Sociais</h1><hr>", unsafe_allow_html=True)
@@ -44,6 +75,18 @@ def main():
         
     with col_graph_etaria:
         st.plotly_chart(piramide_etaria_fig)
+    
+    col_card_1, _col_card_2,col_card_3, _col_card_4,col_card_5 = st.columns(5)
+    with col_card_1:
+        kpi_card("Indice de Envelhecimento","40.58")
+    
+    with col_card_3:
+        kpi_card("IDH","0.76")
+    
+    with col_card_5:
+        kpi_card("Índice de GINI","0.56")
+    
+    
     
     st.plotly_chart(sun_pop_fig)
     
